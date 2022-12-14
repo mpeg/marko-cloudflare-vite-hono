@@ -1,0 +1,30 @@
+{
+  "name": "marko-cloudflare-vite-hono",
+  "version": "1.0.0",
+  "description": "Example of using marko + vite + cf pages + hono",
+  "main": "dist/worker.js",
+  "author": "mpeg",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "@marko/compiler": "^5.23.0",
+    "@marko/tags-api-preview": "^0.6.1",
+    "@marko/vite": "^2.3.9",
+    "hono": "^2.5.7",
+    "marko": "^5.22.0",
+    "postcss": "^8.4.19",
+    "postcss-preset-env": "^7.8.3",
+    "vite": "^3.2.4",
+    "wrangler": "^2.5.0"
+  },
+  "scripts": {
+    "dev": "wrangler pages dev --local -- vite dev",
+    "build": "yarn run build:worker && yarn run build:client",
+    "build:client": "vite build",
+    "build:worker": "vite build --ssr ./src/_worker.ts",
+    "preview": "yarn run build && wrangler pages dev dist",
+    "deploy": "yarn run build && wrangler pages publish dist",
+    "vite": "vite"
+  },
+  "type": "module"
+}

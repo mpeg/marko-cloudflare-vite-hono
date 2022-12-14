@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+      "lib": [
+        "ESNext",
+        "dom"
+      ],
+      "outDir": "lib",
+      "removeComments": true,
+      "target": "es2020",
+      "module": "es2022",
+      "baseUrl": "./",
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "paths": {},
+      "sourceMap": true,
+      "sourceRoot": "/",
+      "alwaysStrict": true,
+      "allowUnreachableCode": false,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "noImplicitReturns": true,
+      "noUncheckedIndexedAccess": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "types": ["node", "vite/client"]
+    },
+    "include": ["./src/**/*.ts", "src/_worker.ts"],
+    "exclude": [
+      "node_modules/**/*"
+    ]
+  }
